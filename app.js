@@ -9,16 +9,16 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://mongodb:27017/test2690');
+// var mongoose = require('mongoose');
+// mongoose.connect('mongodb://mongodb:27017/test2690');
 
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'CONNECTION ERROR'));
-db.once('open', function () {
-  //Connection Check
-  console.log('MongoDb Connected Successfully');
-  console.log(db.collections)
-})
+// var db = mongoose.connection;
+// db.on('error', console.error.bind(console, 'CONNECTION ERROR'));
+// db.once('open', function () {
+//   //Connection Check
+//   console.log('MongoDb Connected Successfully');
+//   console.log(db.collections)
+// })
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
